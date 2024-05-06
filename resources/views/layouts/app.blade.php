@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
           name="viewport">
-    <title>@yield('title') &mdash; SUSU Loan</title>
+    <title>@yield('title') &mdash;  MY NURSE PAL PORTAL</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet"
@@ -77,7 +77,6 @@
 <script src="{{ asset('js/custom.js') }}"></script>
 
 @include('pages.messages.all')
-@include('pages.messages.timeout')
 </body>
 
 </html>

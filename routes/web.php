@@ -15,27 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/dashboards/home');
 
-include 'loan/authenticate.php';
+include 'routes/dashboard.php';
 
-include 'loan/dashboard.php';
-include 'loan/loan.php';
-include "loan/settings.php";
-include  'loan/report.php';
+include 'routes/authenticate.php';
 
-Route::get('/fix-balances', function (){
-
-    $loans = \App\Models\Loan::with('balance')->get();
-    echo 'Total ' . $loans->count();
-    $count = 0;
-    $loanBalanceService = app()->make(\App\Services\LoanBalanceService::class);
-    foreach ($loans as $loan) {
-        if ($loan->balance == null) {
-            $loanBalanceService->grantLoan($loan->id, 0, $loan->loan_account_id, $loan->company_id, $loan->branch_id);
-            $count ++;
-        }
-    }
-
-    echo 'Fixed ' . $count;
-
-
-});

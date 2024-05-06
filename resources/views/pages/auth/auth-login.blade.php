@@ -7,24 +7,24 @@
 @endpush
 
 @section('main')
-    <div class="card card-success">
+    <div class="card card-primary">
         <div class="card-header">
-            <h4 class="text-success">Login</h4>
+            <h4 class="text-primary">Login</h4>
         </div>
 
         <div class="card-body">
          {{Form::open(['url' => route('attempt'), 'action' => 'post'])}}
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input id="username"
-                        type="text"
+                    <label for="email">Email</label>
+                    <input id="email"
+                        type="email"
                         class="form-control"
-                        name="username"
+                        name="email"
                         tabindex="1"
                         required
                         autofocus>
                     <div class="invalid-feedback">
-                        Please fill in your username
+                        Please fill in your email
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
                 <div class="form-group">
                     <button type="submit"
                             id="form-submit"
-                        class="btn btn-success btn-lg btn-block"
+                        class="btn btn-primary btn-lg btn-block"
                         tabindex="4">
                         Login
                     </button>

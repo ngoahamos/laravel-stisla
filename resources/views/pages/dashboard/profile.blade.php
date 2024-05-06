@@ -32,11 +32,8 @@
                                      class="rounded-circle mr-1" style="width: 100px; height: 100px">
                                 <br/><br/>
                                 <span class="text-dark">Name / </span> <span>{{$user->name}}</span> <br/>
-                                <span class="text-dark">Username / </span> <span>{{$user->username}}</span> <br/>
+                                <span class="text-dark">Username / </span> <span>{{$user->email}}</span> <br/>
                                 <span class="text-dark">Role / </span> <span>{{$user->role_name}}</span> <br/>
-                                <span class="text-dark">ID / </span> <span>{{$user->idType ? $user->idType->name . " | " . $user->id_number  : "$user->id_number"}}</span> <br/>
-                                <span class="text-dark">Company / </span> <span>{{$user->company ? $user->company->name : ''}}</span> <br/>
-                                <span class="text-dark">Branch / </span> <span>{{$user->branch ? $user->company->branch : ''}}</span> <br/>
 
                             </div>
                         </div>
