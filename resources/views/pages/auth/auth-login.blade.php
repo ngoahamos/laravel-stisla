@@ -13,7 +13,7 @@
         </div>
 
         <div class="card-body">
-            {{html()->form(route('attempt'), 'post')->open()}}
+            {{html()->form('post',route('attempt'))->open()}}
 
                 <div class="form-group">
                     <label for="email">Email</label>

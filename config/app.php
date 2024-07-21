@@ -16,12 +16,9 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
-    'picture_base' => env('PICTURE_BASE'),
-    'developer' => env('DEVELOPER', 'Koneba Technologies'),
-    'developer_contact' => env('DEVELOPER_CONTACT', '0247790040'),
-    'sms_provider' => env('SMS_PROVIDER'),
-    'sms_sender' => env('SMS_SENDER', 'SUSU'),
-    'mnotify_key' => env('MNOTIFI_KEY', ''),
+    'developer' => env('DEVELOPER', 'Stisla'),
+    'developer_contact' => env('DEVELOPER_CONTACT', '1234567890'),
+
 
     /*
     |--------------------------------------------------------------------------

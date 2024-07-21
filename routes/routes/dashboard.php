@@ -3,7 +3,8 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'dashboards', 'as' => 'dashboards.'], function(){
+//'middleware' => ['auth'],
+Route::group([ 'prefix' => 'dashboards', 'as' => 'dashboards.'], function(){
 
     Route::get('/home', [DashboardController::class, 'home'])->name('home');
 

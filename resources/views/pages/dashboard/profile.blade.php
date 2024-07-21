@@ -28,19 +28,19 @@
                             </div>
                             <div class="card-body">
                                 <img alt="image"
-                                     src="{{ Auth::check() ? Auth::user()->raw_picture != null ? auth::user()->avatar : asset('img/avatar/avatar-1.png')  :  asset('img/avatar/avatar-1.png') }}"
+                                     src="{{ asset('img/avatar/avatar-1.png') }}"
                                      class="rounded-circle mr-1" style="width: 100px; height: 100px">
                                 <br/><br/>
-                                <span class="text-dark">Name / </span> <span>{{$user->name}}</span> <br/>
-                                <span class="text-dark">Username / </span> <span>{{$user->email}}</span> <br/>
-                                <span class="text-dark">Role / </span> <span>{{$user->role_name}}</span> <br/>
+                                <span class="text-dark">Name / </span> <span>Amos Ngoah</span> <br/>
+                                <span class="text-dark">Username / </span> <span>github.com/ngoahamos</span> <br/>
 
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-body">
-                                {{html()->form(route('dashboards.change-my-dp'), 'post')->acceptsFiles()->open()}}
+
+                                {{html()->form('POST', route('dashboards.home'))->acceptsFiles()->open()}}
 
                                 <div class="custom-file">
                                     <input type="file"
@@ -64,7 +64,7 @@
                                 <h4>Change Password</h4>
                             </div>
                             <div class="card-body">
-                                {{html()->form(route('dashboards.change-my-password'),'post')->open()}}
+                                {{html()->form('POST', route('dashboards.home'))->open()}}
 
                                     <div class="form-group">
                                         {{html()->label('old_password','Old Password')}}
