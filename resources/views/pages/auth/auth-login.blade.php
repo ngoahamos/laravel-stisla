@@ -13,7 +13,8 @@
         </div>
 
         <div class="card-body">
-         {{Form::open(['url' => route('attempt'), 'action' => 'post'])}}
+            {{html()->form(route('attempt'), 'post')->open()}}
+
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email"
@@ -64,7 +65,7 @@
                         Login
                     </button>
                 </div>
-          {{Form::close()}}
+                {{html()->form()->close()}}
 
 
         </div>

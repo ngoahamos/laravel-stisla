@@ -40,7 +40,8 @@
 
                         <div class="card">
                             <div class="card-body">
-                               {{Form::open(['url' => route('dashboards.change-my-dp'), 'method' => 'post', 'files' => true])}}
+                                {{html()->form(route('dashboards.change-my-dp'), 'post')->acceptsFiles()->open()}}
+
                                 <div class="custom-file">
                                     <input type="file"
                                            class="custom-file-input"
@@ -51,7 +52,7 @@
                                 <div class="form-group mt-2">
                                     <button class="btn btn-outline-primary form-submit">Change Profile</button>
                                 </div>
-                                {{Form::close()}}
+                                {{html()->form()->close()}}
                             </div>
                         </div>
 
@@ -63,29 +64,31 @@
                                 <h4>Change Password</h4>
                             </div>
                             <div class="card-body">
-                                {{Form::open(['url' => route('dashboards.change-my-password'), 'method' => 'post'])}}
+                                {{html()->form(route('dashboards.change-my-password'),'post')->open()}}
+
                                     <div class="form-group">
-                                        {{Form::label('old_password', 'Old Password')}}
-                                        {{Form::password('old_password', ['class' => 'form-control', 'required'])}}
+                                        {{html()->label('old_password','Old Password')}}
+                                        {{html()->password('old_password')->attributes(['class' => 'form-control', 'required'])}}
+
                                     </div>
 
                                     <div class="form-group">
-                                        {{Form::label('password', 'New Password')}}
-                                        {{Form::password('password', ['class' => 'form-control', 'required'])}}
+                                        {{html()->label('password','New Password')}}
+                                        {{html()->password('password')->attributes(['class' => 'form-control', 'required'])}}
                                         @error('password')
                                             <span class="text-danger">{{$message}}</span>
                                         @enderror
                                     </div>
 
                                     <div class="form-group">
-                                        {{Form::label('password_confirmation', 'Confirm Password')}}
-                                        {{Form::password('password_confirmation', ['class' => 'form-control', 'required'])}}
+                                        {{html()->label('password_confirmation','Confirm Password')}}
+                                        {{html()->password('password_confirmation')->attributes(['class' => 'form-control', 'required'])}}
                                     </div>
 
                                     <div class="form-group">
                                         <button class="btn btn-outline-primary form-submit">Change Password</button>
                                     </div>
-                                {{Form::close()}}
+                                {{html()->form()->close()}}
                             </div>
                         </div>
                     </div>

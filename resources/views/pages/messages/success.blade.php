@@ -15,7 +15,7 @@
 
             function alertMessage() {
                 try {
-                    const message = '{{@session('success_message')}}';
+                    const message = '{{session('success_message')}}';
                     iziToast.success({
                         title: 'Success',
                         message,

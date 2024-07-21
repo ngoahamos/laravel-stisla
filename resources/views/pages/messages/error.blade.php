@@ -9,7 +9,7 @@
 
             function alertMessage() {
                 try {
-                    const message = '{{@session('error_message')}}';
+                    const message = '{{session('error_message')}}';
                     iziToast.error({
                         title: 'Error!',
                         message,

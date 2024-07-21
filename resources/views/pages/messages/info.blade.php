@@ -13,7 +13,7 @@
 
             function alertMessage() {
                 try {
-                    const message = '{{@session('info_message')}}';
+                    const message = '{{session('info_message')}}';
                     iziToast.info({
                         title: 'Info',
                         message,
